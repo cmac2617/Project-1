@@ -17,6 +17,27 @@ $("#bpmSearch").click(function() {$.ajax({
         console.log(results);
     })
 });
+
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://bing-video-search1.p.rapidapi.com/videos/search?q=%3Crequired%3E",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "bing-video-search1.p.rapidapi.com",
+		"x-rapidapi-key": "0466b425e4msh137dd8f4fe6d1f0p17b381jsnf4e4d66a1815"
+	}
+}
+
+console.log(settings)
+
+var x = document.getElementById("BingVideo");
+
+$("Bingvideo").click(function(){
+x.innerHTML = settings;
+})
+       //API Call
 //var results1 = "";
     //$.ajax({
        // url: "https://itunes.apple.com/search?term=jack+johnson",

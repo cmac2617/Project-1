@@ -1,0 +1,23 @@
+body {
+    background-image: url("../Project-1/Assests/images/BKima2.jpg");
+    background-color: gainsboro;
+    background-size: cover;
+}
+
+.nav{ 
+    background-color: rgba(49, 63, 82);
+    margin: auto;
+}
+
+.HomeCard { 
+    background-color: rgb(49, 63, 82);
+}
+
+.btn {
+    background-color: black;
+}
+
+.lyrcisCard {
+    margin: auto;
+    float: left;
+}
