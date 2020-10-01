@@ -1,7 +1,11 @@
+
+
 body {
     background-image: url("../Project-1/Assests/images/BKima2.jpg");
     background-color: gainsboro;
     background-size: cover;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .nav{ 
@@ -9,15 +13,29 @@ body {
     margin: auto;
 }
 
+.navbar-brand {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 150%;
+}
+
+.display-4 {
+    font-family:'Bungee Inline', cursive;
+    font-size: 500%;
+}
+
+
 .HomeCard { 
-    background-color: rgb(49, 63, 82);
+    background-color: rgb(228, 233, 240);
+
 }
 
 .btn {
     background-color: black;
 }
 
-.lyrcisCard {
-    margin: auto;
-    float: left;
+
+
+
+h5 {
+    font-family: 'Bungee', cursive;
 }
