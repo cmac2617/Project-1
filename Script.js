@@ -1,77 +1,58 @@
-
-
 var bpm = "";
-$("#bpmSearch").click(function() {
-    bpm = $("#bpminput").val();
-    console.log($("#bpmSearch").val());
-    console.log(bpm);
+var artistList = [];
+var playList = [];
+var bpmList = [];
+// On click event to make first AJAX call to "getsongbpm".
+$("#bpmSearch").click(function(event) {
+    event.preventDefault();
+    bpm = $("#bpmInput").val();
+    localStorage.setItem("bpmStringified", bpm);
+    $(location).attr("href", "RP.html");
+    // $.ajax({
+    //     url: "https://api.getsongbpm.com/tempo/?api_key=328b19bb2055fb8c628bfe2d7d83508d&bpm=" + bpm,
+    //     method: "GET"
+    // })
+    //     // After the data comes back from the API
+    //     .then(function (response) {
+    //         // Storing an array of results in the results variable
+    //         response = JSON.parse(response);
+    //         var i = 0;
+    //         for (i = 0; i < 10; i++) {
+    //             $("#song-list").append(response.tempo[i].song_title);
+    //             artistList.push(response.tempo[i].artist.name);
+    //             playList.push(response.tempo[i].song_title);
+    //             bpmList.push(response.tempo[i].tempo);
+    //         }
+    //         console.log(artistList);
+    //         console.log(playList);
+    //         console.log(bpmList);
+    //     })
 });
-$("#bpmSearch").click(function() {$.ajax({
-    url: `https://api.getsongbpm.com/tempo/?api_key=57452074649ab146238866e6411b82b5&bpm=${bpm}`,
+// Second AJAX call to get links to iTunes page for each artist.
+// Only runs once there are 10 artists to search and then exits.
+var links = setInterval(function () {
+    if (artistList.length == 10) {
+        var i = 0;
+        for (i == 0; i < playList.length; i++) {
+            $.ajax({
+                url: "https://itunes.apple.com/search?term=" + artistList[i],
+                method: "GET"
+            })
+                .then(function (response) {
+                    console.log(response.results[i].artistViewUrl)
+                })
+        }
+        clearInterval(links);
+    }
+}, 1000);
+// Third API will get song lyrics.
+// Each artist will be on "on click" event to generate lyrics on page.
+var artist = "cher";
+var songgg = "believe";
+$.ajax({
+    url: "https://orion.apiseeds.com/api/music/lyric/" + artist + "/" + songgg + "?apikey=jHfKMGQkqpG8PUmPiWEAMXUg5h10bEhKI6cduUVaS5qr0Ap5LwRCFe1zAMpQK1Eg ",
     method: "GET"
 })
-    // After the data comes back from the API
     .then(function (response) {
-        // Storing an array of results in the results variable
-        var results = response;
-        console.log(results);
+        console.log(response);
     })
-});
-
-
-var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://bing-video-search1.p.rapidapi.com/videos/search?q=%3Crequired%3E",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "bing-video-search1.p.rapidapi.com",
-		"x-rapidapi-key": "0466b425e4msh137dd8f4fe6d1f0p17b381jsnf4e4d66a1815"
-	}
-}
-
-console.log(settings)
-
-var x = document.getElementById("BingVideo");
-
-$("Bingvideo").click(function(){
-x.innerHTML = settings;
-})
-       //API Call
-//var results1 = "";
-    //$.ajax({
-       // url: "https://itunes.apple.com/search?term=jack+johnson",
-        //method: "GET"
-    //})
-    //.then(function(response) {results1 = response;
-        //console.log(results1);
-    //})
-
-
-
-
-
-//Variables//
-
-
-// When the search button is clicked
-      //$("id").click(function(){
-             //page retuns a new page.
-            //retuns songs info in Playlist
-                //API Call
-                    //....
-             // itunes API
-                //API Call
-                    //...
-      //})
-   
-//
-
-
-//When song from the paylist is clicked lyrics sections retuns lyrics 
- 
-        //returns songs lyrics
-          //$("id").click(function(){
-               //Click event on playlist list items returns lyrics 
-               //APi Call
-          //})

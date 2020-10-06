@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title>Project-1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="stylesheet.css"> 
   </head>
   <body>
-
-
 <!--Nav Bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"> Music Match</a>
@@ -19,62 +17,48 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="HomePage.html">Home <span class="sr-only">(current)</span></a>
-        
       </div>
     </div>
   </nav>
-
     <br></br>
-
 <!--Nav Bar Closed-->
-
 <!--playlist Card col-6 -->
-
 <!--close playlist --> 
-
-
-
 <div class="row">
   <div class="col-sm-6 Card1">
     <div class="card Songlist">
       <div class="card-body">
         <h5 class="card-title">Song List</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        
+        <ol id = "box1" class="card-text"></ol>
       </div>
     </div>
   </div>
-  
   <!--ItunesAPI playlist col -6 -->
 <!-- ItunesAPI Playlist from GetsongBPM -->  
 <div class="col-sm-6 Card2">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Stream Music</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      
+      <ol id = "box2" class="card-text">
+      </ol>
     </div>
   </div>
 </div>
 </div>
-  
 <!--close ItunesAPI playlist --> 
-
 <!--Lyrics  col -6 -->
        <!-- Lyrics from GeniusAPI -->
 <br></br>
-
-
-<div class="col-sm-6 Card3">
+<div class="container-fluid">
   <div class="card lyrcis">
     <div class="card-body">
       <h5 class="card-title">Song Lyrics</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      
+      <p id = "box3"></p>
     </div>
   </div>
 </div>
 </div>
 <!-- close ItunesAPI playlist  -->
-
-<!---->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script3.js"></script>
+</body>
