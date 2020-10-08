@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Match</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand"> Music Match</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="index.html">Generate a new playlist!<span
+            class="sr-only">(current)</span></a>
+
+      </div>
+    </div>
+  </nav>
+
+  <br></br>
+
+  <div class="row container-fluid">
+    <div class="col-md-6 Card1">
+      <div class="card Songlist">
+        <div class="card-body">
+          <h5 class="card-title">Playlist</h5>
+          <ol id="box1" class="card-text"></ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 Card2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Artist Pages</h5>
+          <ol id="box2" class="card-text"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br></br>
+
+  <div class="container-fluid">
+    <div class="card lyrcis">
+      <div class="card-body">
+        <h5 class="card-title">Song Lyrics</h5>
+        <p id="box3"></p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script2.js"></script>
+</body>

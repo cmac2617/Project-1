@@ -1,0 +1,39 @@
+body {
+    background-image: url("images/background.jpg");
+    background-color: gainsboro;
+    background-size: cover;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.nav{ 
+    background-color: rgba(49, 63, 82);
+    margin: auto;
+}
+
+.navbar-brand {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 150%;
+}
+
+.display-4 {
+    font-family:'Bungee Inline', cursive;
+    font-size: 500%;
+}
+
+.HomeCard { 
+    background-color: rgb(228, 233, 240);
+
+}
+
+.btn {
+    background-color: black;
+}
+
+h5 {
+    font-family: 'Bungee', cursive;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
